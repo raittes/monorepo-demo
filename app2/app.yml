@@ -21,10 +21,12 @@ spec:
       labels:
         project: monorepo-demo
         role: app2
+    annotations:
+      samson/dockerfile: app2/Dockerfile
     spec:
       containers:
       - name: monorepo-demo
-        image: my.registry/some-namespace/monorepo-demo:latest
+        image: my.registry/some-namespace/monorepo-demo-app2:latest
         resources:
           requests:
             cpu: 10m
